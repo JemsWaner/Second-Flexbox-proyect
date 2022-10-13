@@ -1,5 +1,6 @@
 * {
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 body {
   background: rgb(230, 230, 230);
@@ -35,18 +36,18 @@ header ul {
   gap: 16px;
   cursor: pointer;
 }
-ul li:first-child {
+header ul li:first-child {
   position: relative;
 }
-ul li:first-child li {
+header ul li:first-child li {
   padding: 10px 0;
 }
-ul li:first-child ul {
+header ul li:first-child ul {
   display: none;
   position: absolute;
   top: 35px;
   left: -60px;
-  width: 130px;
+  width: 170px;
   min-height: 100px;
   padding: 15px;
   overflow: auto;
@@ -54,11 +55,11 @@ ul li:first-child ul {
   background: white;
   border-radius: 10px;
 }
-ul li:first-child:hover ul {
+header ul li:first-child:hover ul {
   display: block;
   border-bottom: gray solid 2px;
 }
-ul li img {
+header ul li img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -78,18 +79,10 @@ ul li img {
   border: solid 8px rgb(79, 70, 229);
 }
 
-/*******Nav left styles*********/
-main {
-  display: flex;
-  min-height: 100vh;
-}
+/**************Nav left styles***************/
 .left-column {
   width: 20%;
-  margin: 20px;
-}
-nav ul {
-  list-style: none;
-  padding-left: 0;
+  margin: 30px;
 }
 .blue-btn {
   color: white;
@@ -107,6 +100,10 @@ nav ul li h4 {
 }
 i {
   width: 25px;
+}
+.left-column nav ul {
+  list-style: none;
+  padding-left: 0;
 }
 nav ul li {
   display: flex;
@@ -142,3 +139,76 @@ nav ul li a:hover {
   border: none;
   background: black;
 }
+/****-------------Second Section------------***/
+main h4 {
+  color: rgb(146, 140, 140);
+}
+.top-row {
+  margin: 30px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.top-row h4 {
+  flex-basis: 100%;
+}
+.top-row h4 span {
+  color: initial;
+  font-weight: bolder;
+}
+.top-row > article {
+  background: white;
+  flex-grow: 1;
+  min-width: 100px;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.top-row > article p:last-child {
+  color: rgb(14, 193, 14);
+}
+.top-row article:nth-child(3) p:last-child {
+  color: red;
+}
+.top-row > article p span {
+  font-weight: 600;
+  font-size: 18px;
+}
+.top-row > article p {
+  display: inline;
+}
+.top-row > article p:last-child {
+  margin-left: auto;
+}
+/***********Bottom Row***************/
+.bottom-row {
+  margin: 30px;
+}
+.bottom-row > article {
+  background: white;
+  flex-basis: 20%;
+  min-width: 100px;
+  flex-shrink: 0;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bottom-row article div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.bottom-row article div button {
+  border: none;
+  background: transparent;
+  padding: 6px;
+  border-radius: 6px;
+}
+.bottom-row article div button:hover {
+  border: solid;
+}
+.bottom-row article img {
+  width: 100%;
+  height: 350px;
+}
+/************SECOND BOTTOM ROW**************/
