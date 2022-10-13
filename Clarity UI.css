@@ -1,0 +1,144 @@
+* {
+  font-family: sans-serif;
+}
+body {
+  background: rgb(230, 230, 230);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  border-bottom: 2px solid rgb(188, 188, 188);
+  background: white;
+}
+header .search-stuff {
+  border: 2px solid rgb(188, 188, 188);
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+header .search-bar {
+  width: 100%;
+  border: transparent;
+  border-radius: 10px;
+  min-height: 40px;
+  outline: none;
+}
+header ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  gap: 16px;
+  cursor: pointer;
+}
+ul li:first-child {
+  position: relative;
+}
+ul li:first-child li {
+  padding: 10px 0;
+}
+ul li:first-child ul {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: -60px;
+  width: 130px;
+  min-height: 100px;
+  padding: 15px;
+  overflow: auto;
+  border: 2px solid currentColor;
+  background: white;
+  border-radius: 10px;
+}
+ul li:first-child:hover ul {
+  display: block;
+  border-bottom: gray solid 2px;
+}
+ul li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: solid red;
+}
+.title {
+  display: flex;
+  gap: 6px;
+  cursor: pointer;
+}
+.title span {
+  align-self: center;
+  flex: 0 0 auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 8px rgb(79, 70, 229);
+}
+
+/*******Nav left styles*********/
+main {
+  display: flex;
+  min-height: 100vh;
+}
+.left-column {
+  width: 20%;
+  margin: 20px;
+}
+nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+.blue-btn {
+  color: white;
+  background: rgb(79, 70, 229);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+nav ul li h4 {
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+  color: rgb(146, 140, 140);
+}
+i {
+  width: 25px;
+}
+nav ul li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.same-line a {
+  margin-right: auto;
+}
+nav ul li a {
+  color: initial;
+  margin-bottom: 0;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+nav ul li a:hover {
+  color: rgb(227, 18, 18);
+}
+.border {
+  border: 2px solid;
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 0;
+}
+.border.new {
+  color: rgb(85, 77, 245);
+}
+.border.fifteen {
+  font-weight: 600;
+  color: rgb(188, 188, 188);
+  border: none;
+  background: black;
+}
