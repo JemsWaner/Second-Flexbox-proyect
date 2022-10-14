@@ -141,22 +141,20 @@ nav ul li a:hover {
   border: none;
   background: black;
 }
-/****-------------Second Section------------***/
-h4 {
-  font-size: 14px;
-}
-main h4 {
-  color: rgb(146, 140, 140);
-  margin-top: 0;
-}
+/****-------------TOP ROW------------***/
 .top-row {
-  margin: 30px;
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
 }
+h4 {
+  font-size: 14px;
+  color: rgb(146, 140, 140);
+  margin-top: 5px;
+}
 .top-row h4 {
   flex-basis: 100%;
+  margin-bottom: 10px;
 }
 .top-row h4 span {
   color: initial;
@@ -185,10 +183,10 @@ main h4 {
 }
 .top-row > article p:last-child {
   float: right;
+  margin-top: 0;
 }
 /***********Charts statistics***************/
 .charts-row {
-  margin: 25px;
   background: white;
   min-width: 100px;
   padding: 15px;
@@ -219,46 +217,46 @@ main p span {
 }
 .charts-row article img {
   width: 100%;
-  height: 350px;
+  height: 250px;
 }
 /************SECOND BOTTOM ROW**************/
-.second-bottom-row {
-  margin: 25px;
+.cards-row {
   background: white;
   min-width: 100px;
   padding: 15px;
   border-radius: 10px;
   border: 2px solid rgb(188, 188, 188);
 }
-.second-bottom-row > div {
+.cards-row > div {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-.second-bottom-row h4,
+.cards-row h4,
 p {
   margin-top: 6px;
   margin-bottom: 0;
 }
-.second-bottom-row > div a {
+.cards-row > div a {
   color: rgb(79, 70, 229);
 }
-.second-bottom-row article > div {
+.cards-row article > div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
   border-bottom: 2px solid rgb(188, 188, 188);
 }
-.second-bottom-row article > div:last-of-type {
+.cards-row article > div:last-of-type {
   border-bottom: none;
   padding-bottom: 0;
 }
-.second-bottom-row article > div:hover {
+.cards-row article > div:hover {
   background-color: rgb(240, 240, 240);
   cursor: pointer;
 }
-.second-bottom-row article > div .color {
+.cards-row article > div .color {
   text-align: center;
   padding: 5px;
   color: rgb(4, 77, 4);
@@ -284,15 +282,14 @@ article > div .color.red {
 }
 /*************MINI CONTAINER****************/
 
-.mini-container {
-  margin: 25px;
+.status-row {
   background: white;
   min-width: 100px;
   padding: 15px;
   border-radius: 10px;
   border: 2px solid rgb(188, 188, 188);
 }
-.mini-container article div p {
+.status-row article div p {
   display: inline;
 }
 article div .space {
@@ -300,7 +297,7 @@ article div .space {
   float: right;
   margin-top: 0;
 }
-.mini-container article div {
+.status-row article div {
   margin-top: 12px;
 }
 .blue-line {
@@ -336,7 +333,6 @@ article div .space {
 /*********EMAIL CONTACTS CONTENT***********/
 
 .emails-content {
-  margin: 25px;
   background: white;
   min-width: 100px;
   padding: 15px;
@@ -347,6 +343,7 @@ article div .space {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .flex-lines img {
   width: 45px;
@@ -354,4 +351,34 @@ article div .space {
   border-radius: 50%;
   border: solid red;
   cursor: pointer;
+}
+/**********Media Queries************/
+#second-flex {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.spacing-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.charts-row,
+.cards-row {
+  flex-basis: 60%;
+  flex: 1 1 auto;
+}
+.status-row,
+.emails-content {
+  min-width: 200px;
+  flex: 1;
+}
+@media (max-width: 500px) {
+  .left-column {
+    display: none;
+  }
+  .spacing-flex {
+    flex-wrap: wrap;
+  }
 }
