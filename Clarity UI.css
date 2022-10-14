@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(230, 230, 230);
+  background: rgb(239, 238, 238);
 }
 header {
   display: flex;
@@ -60,8 +60,8 @@ header ul li:first-child:hover ul {
   border-bottom: gray solid 2px;
 }
 header ul li img {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   border: solid red;
 }
@@ -184,12 +184,11 @@ main h4 {
   display: inline;
 }
 .top-row > article p:last-child {
-  margin-left: auto;
+  float: right;
 }
-/***********Bottom Row***************/
-.charts-row,
-.second-bottom-row {
-  margin: 30px;
+/***********Charts statistics***************/
+.charts-row {
+  margin: 25px;
   background: white;
   min-width: 100px;
   padding: 15px;
@@ -215,12 +214,22 @@ main p span {
 .charts-row article div button:hover {
   border: solid;
 }
+.charts-row article div .btn-exception {
+  border: 2px solid black;
+}
 .charts-row article img {
   width: 100%;
   height: 350px;
 }
 /************SECOND BOTTOM ROW**************/
-
+.second-bottom-row {
+  margin: 25px;
+  background: white;
+  min-width: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(188, 188, 188);
+}
 .second-bottom-row > div {
   display: flex;
   justify-content: space-between;
@@ -272,4 +281,77 @@ article > div .color.yellow {
 article > div .color.red {
   color: rgb(183, 20, 9);
   background: rgb(255, 159, 159);
+}
+/*************MINI CONTAINER****************/
+
+.mini-container {
+  margin: 25px;
+  background: white;
+  min-width: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(188, 188, 188);
+}
+.mini-container article div p {
+  display: inline;
+}
+article div .space {
+  text-align: end;
+  float: right;
+  margin-top: 0;
+}
+.mini-container article div {
+  margin-top: 12px;
+}
+.blue-line {
+  position: relative;
+  margin-bottom: 20px;
+  border: 2px solid transparent;
+  height: 11px;
+  border-radius: 7px;
+  background: rgb(230, 226, 226);
+}
+.blue-line::before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 7px;
+  border-radius: 5px;
+  background: rgb(79, 70, 229);
+}
+.blue-line:hover::before {
+  position: absolute;
+  background: rgb(35, 30, 129);
+  transition: all 0.5s;
+}
+.blue-line.two::before {
+  width: 65%;
+}
+.blue-line.three::before {
+  width: 45%;
+}
+.blue-line.four::before {
+  width: 25%;
+}
+/*********EMAIL CONTACTS CONTENT***********/
+
+.emails-content {
+  margin: 25px;
+  background: white;
+  min-width: 100px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid rgb(188, 188, 188);
+}
+.flex-lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-lines img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: solid red;
+  cursor: pointer;
 }
