@@ -73,8 +73,8 @@ header ul li img {
 .title span {
   align-self: center;
   flex: 0 0 auto;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: solid 8px rgb(79, 70, 229);
 }
@@ -101,7 +101,7 @@ a {
   color: initial;
   text-decoration: none;
 }
-.left-column nav ul {
+.left-column ul {
   list-style: none;
   padding-left: 0;
 }
@@ -118,11 +118,11 @@ nav ul li {
 .same-line a {
   margin-right: auto;
 }
-nav ul li a {
+.left-column ul li a {
   margin-bottom: 0;
   transition: all 0.3s;
 }
-nav ul li a:hover {
+.left-column ul li a:hover {
   color: rgb(227, 18, 18);
 }
 .border {
@@ -139,6 +139,18 @@ nav ul li a:hover {
   color: rgb(188, 188, 188);
   border: none;
   background: black;
+}
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.margin-auto {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.margin-auto li {
+  margin-block-start: 16px;
 }
 /****-------------TOP ROW------------***/
 .top-row {
@@ -351,6 +363,21 @@ article div .space {
   border: solid red;
   cursor: pointer;
 }
+/*******MENU HIDDEN*********/
+.menu-hidden {
+  background-color: rgb(85, 77, 245);
+  min-height: 26px;
+  display: none;
+}
+.menu-hidden i {
+  color: white;
+  margin-left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.menu-hidden i:hover .left-column {
+  display: block;
+}
 /**********Media Queries************/
 .left-column {
   flex-basis: 25%;
@@ -381,5 +408,8 @@ main {
 @media (max-width: 700px) {
   .left-column {
     display: none;
+  }
+  .menu-hidden {
+    display: block;
   }
 }
