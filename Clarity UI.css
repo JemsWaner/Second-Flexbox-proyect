@@ -80,10 +80,6 @@ header ul li img {
 }
 
 /**************Nav left styles***************/
-.left-column {
-  width: 20%;
-  margin: 30px;
-}
 .blue-btn {
   color: white;
   background: rgb(79, 70, 229);
@@ -108,6 +104,9 @@ a {
 .left-column nav ul {
   list-style: none;
   padding-left: 0;
+}
+nav ul {
+  margin-block-start: 0;
 }
 nav ul li {
   display: flex;
@@ -353,32 +352,34 @@ article div .space {
   cursor: pointer;
 }
 /**********Media Queries************/
-#second-flex {
+.left-column {
+  flex-basis: 25%;
+  margin: 30px;
+}
+main {
+  display: flex;
+}
+#right-column {
   margin: 30px;
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 20px;
 }
 .spacing-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
-}
-.charts-row,
-.cards-row {
-  flex-basis: 60%;
-  flex: 1 1 auto;
-}
-.status-row,
-.emails-content {
+  gap: 20px;
   min-width: 200px;
-  flex: 1;
 }
-@media (max-width: 500px) {
+.spacing-flex section:first-of-type {
+  flex: 1 1 60%;
+}
+.spacing-flex section:last-of-type {
+  flex: 1 1 35%;
+  min-width: 250px;
+}
+@media (max-width: 700px) {
   .left-column {
     display: none;
-  }
-  .spacing-flex {
-    flex-wrap: wrap;
   }
 }
