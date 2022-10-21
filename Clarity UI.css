@@ -380,7 +380,6 @@ article div .space {
 }
 /**********Media Queries************/
 .left-column {
-  flex-basis: 20%;
   margin: 30px;
 }
 main {
