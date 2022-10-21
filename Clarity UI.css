@@ -366,7 +366,7 @@ article div .space {
 /*******MENU HIDDEN*********/
 .menu-hidden {
   background-color: rgb(85, 77, 245);
-  min-height: 26px;
+  min-height: 24px;
   display: none;
 }
 .menu-hidden i {
@@ -380,7 +380,7 @@ article div .space {
 }
 /**********Media Queries************/
 .left-column {
-  flex-basis: 25%;
+  flex-basis: 20%;
   margin: 30px;
 }
 main {
@@ -402,7 +402,7 @@ main {
   flex: 1 1 60%;
 }
 .spacing-flex section:last-of-type {
-  flex: 1 1 35%;
+  flex: 1 1 30%;
   min-width: 250px;
 }
 @media (max-width: 700px) {
